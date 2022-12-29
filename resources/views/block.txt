@@ -1,0 +1,159 @@
+
+
+
+CONTROLADOR
+
+$idDiplomado =1;
+        $diplomado = Diplomado::find($idDiplomado)->diplomado_cursos;
+        
+        $usuario = User::find(10694);
+
+        $inscripciones = $usuario->inscripciones;
+        // $inscripciones = $diplomado;
+
+        $materialesTotal = [];
+        foreach ($inscripciones as $inscripcion) {
+            $suma = 0;
+            foreach ($inscripcion->asignado->contenidos as $contenido) {
+                $suma +=count($contenido->materiales);                
+            }
+            array_push($materialesTotal, $suma);
+        }
+
+
+        $videosVistos= [];
+        // foreach ($hisVideo as $video) {
+        foreach ($inscripciones as $video) {
+            array_push($videosVistos,count($video->historialVideos) );
+        }
+
+        $cursosTerminados=0;
+        $porcentajeAvance = [];
+
+        for ($i=0; $i <= count($materialesTotal)-1; $i++) { 
+            // if ($materialesTotal[$i] == $videosVistos[$i]) { /* Cuando se termina los cursos */
+                if ($materialesTotal[$i] !=0) {
+                    $cursosTerminados +=1;
+                    array_push($porcentajeAvance, round(($videosVistos[$i]/$materialesTotal[$i])*100));
+                }
+            // }
+        }
+
+        return view('panel-diplomado',[
+            'diplomado' => $diplomado,
+            'materialesTotal' => $materialesTotal,
+            'videosVistos' => $videosVistos,
+            'porcentajeAvance' => $porcentajeAvance,
+        ]);
+
+
+
+
+
+
+        *************************************
+        $vistos = DB::table('diplomado_cursos')
+        ->select('asignados.idasig',DB::raw('COUNT(historial_video.idinscripcion) as followers'))
+        ->join('asignados', 'asignados.idasig', '=', 'diplomado_cursos.idasig')
+        ->join('inscripcion', 'inscripcion.asignados_idasig', '=', 'asignados.idasig')
+        ->join('historial_video', 'historial_video.idinscripcion', '=', 'inscripcion.idinsc')
+        ->groupBy('asignados.idasig')
+        ->where('diplomado_cursos.iddiplomado','1')
+        ->where('inscripcion.idalum','10694')
+        ->get();
+        
+
+        $materiales = DB::table('diplomado_cursos')
+        ->select('asignados.idasig',DB::raw('COUNT(asignados.idasig) as followers'))
+        ->join('asignados', 'asignados.idasig', '=', 'diplomado_cursos.idasig')
+        ->join('contenido', 'contenido.idasig', '=', 'asignados.idasig')
+        ->join('material', 'material.idc', '=', 'contenido.idc')
+        ->groupBy('asignados.idasig')
+        ->where('diplomado_cursos.iddiplomado','1')
+        ->get();
+
+        $hisV =[];
+        foreach ($vistos as $visto) {
+            array_push($hisV, $visto->followers);
+        }
+        $mat =[];
+        foreach ($materiales as $material) {
+            array_push($mat, $material->followers);
+        }
+
+        $porc = [];
+        foreach ($mat as $key =>  $m) {
+            $por = round(($hisV[$key]/$mat[$key])*100);
+            array_push($porc, $por);
+        }
+
+        return view('panel-diplomado',[
+            'vistos' => $hisV,
+            'materiales' => $mat,
+            'porc' => $porc,
+        ]);
+
+        ------------------
+         @foreach ($vistos as $item)
+        {{$item}}
+    @endforeach
+    <hr>
+    @foreach ($materiales as $item)
+        {{$item}}
+    @endforeach
+    <hr>
+    @foreach ($porc as $item)
+        {{$item}}
+    @endforeach
+
+
+    ]]]]]]]]]]]]]
+    <?php
+
+namespace App\View\Components;
+
+use App\Models\Asignado;
+use Illuminate\View\Component;
+
+class PorcentajeCurso extends Component
+{
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+
+    public $idasig;
+    public $mat;
+    public $vist=[];
+    public $porc;
+
+    public function __construct($idasig)
+    {
+        $this->idasig = $idasig;
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
+        $this->porcentaje();
+        return view('components.porcentaje-curso');
+    }
+    public function porcentaje(){
+        $this->mat = 0;
+        // $this->vist = 0;
+        foreach (Asignado::find($this->idasig)->contenidos as $contenido) {
+            $this->mat += count($contenido->materiales);
+        }
+        foreach (Asignado::find($this->idasig)->contenidos as $contenido) {
+            foreach ($contenido->materiales as $value) {
+                array_push($this->vist, $value->user_video->where('iduser','10694'));
+            }
+        }
+
+    }
+}

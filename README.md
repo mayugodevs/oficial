@@ -1,0 +1,1 @@
+##No alterar la tabla paises, siempre el dolar debe ser el ID 13, los demas si pueden ser modificados a gusto
