@@ -235,6 +235,7 @@ module.exports = {
           'graypricingstrike':'#697586',
           'benefitstalkssmarger':'#B3DAFC',
           'bgcolflecha':'#12B76A',
+          'bgtanks':'#059669',
           
           
         },

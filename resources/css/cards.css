@@ -72,6 +72,7 @@
 .jusya{
     margin-top:-20px;
 }
+
 .ndotm {
     
     width: 25px !important;
@@ -262,11 +263,28 @@
     top: 2px;
     left: 4px;
 }
+@media (max-width: 640px){
+  
+ .alturachat{
+   min-height: 410px;
+   
+ }
+  
+}
 
 @media (min-width: 640px){
    .containermygo{
     max-width: 640px;
    }
+   .bloqueuno{
+    @apply  flex;
+  }
+  .bloquedos{
+    @apply  flex;
+  }
+  .alturachat{
+    min-height: 410px;
+  }
    
 }
 @media (min-width: 768px){
@@ -288,7 +306,9 @@
       max-width: 354px;
     }
 
-
+    .alturachat{
+      min-height: 520px;
+    }
     
  }
  @media (min-width: 1024px){
@@ -317,6 +337,9 @@
     }
     .chatswidth{
       max-width: 470px;
+    }
+    .alturachat{
+      min-height: 610px;
     }
  }
  @media (min-width: 1280px){
@@ -348,6 +371,10 @@
       max-width: 768px;
     }
 
+    .alturachat{
+      min-height: 460px;
+    }
+
     
  }
  @media (min-width: 1440px){
@@ -374,7 +401,9 @@
     .chatswidth{
       max-width: 933px;
     }
-    
+    .alturachat{
+      min-height: 670px;
+    }
  }
 
  .pendeivis::-webkit-scrollbar {
@@ -994,6 +1023,47 @@ line-height: 20px;
     display: block;
     @apply bg-bcklightbuscador dark:bg-lightgreenpricing;
   }
+
+  .radio-free {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    margin: 10px 0 0;
+    
+  }
+
+  .radio-free input[type='radio'] {
+    display: none;
+  }
+  
+  .radio-free label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    @apply border-2 border-borderconcours dark:border-txtcommentply;
+    background-color: transparent;
+    
+  }
+  
+  .radio-free input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    content: " ";
+    display: block;
+    opacity: 1;
+    @apply bg-bcklightbuscador dark:bg-lightgreenpricing border-2 border-bcklightbuscador dark:border-lightgreenpricing;
+  }
+
+
   .labelpricingcuotas{
       
 line-height: 180%;

@@ -5,10 +5,12 @@
     <br>
     <br>
     <br>
-    <div>  
-        @if ($type == 2){{-- admin --}}
-            aquiii
-        @else 
+    <div>  {{--  --}}
+        {{-- @if --}} {{-- ($type == 2) --}}{{-- admin --}}
+            <div class="pt-40">
+                aquiii
+            </div>
+        {{-- @else  --}}
             <div class="grid grid-cols-1  mx-0 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 ml:grid-cols-6 text-center mt-3 justify-items-center">
                 @foreach ($lists as $list) 
                     {{-- @if (!in_array($list->curs_idasig,$cursos_asig)) --}}
@@ -101,7 +103,7 @@
                     {{-- @endif --}}
                 @endforeach
             </div> 
-        @endif
+        {{-- @endif --}}
     </div>
     {{-- modal de register --}}
     <div>

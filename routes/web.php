@@ -105,6 +105,10 @@ Route::view('panel_integrado','panel_integrado')->name('panel_integrado');
 
 Route::view('CursoPricing','CursoPricing')->name('CursoPricing');
 
+Route::view('tanks','tanks')->name('tanks');
+
+Route::view('regalarCurso','regalarCurso')->name('regalarCurso');
+
 Route::view('comunidad','comunidad');
 // Route::get('/', [HomeController::class,'index'] )->name('inicio'); ******************OBSOLETO
 // Route::get('perfil', [PerfilController::class, 'show'])->name('perfil')->middleware('auth'); ******************OBSOLETO
@@ -191,6 +195,7 @@ Route::get('admin/deudores-diversos', [Administrador::class,'deudores_diversos']
 Route::get('fetch_deudores', [Administrador::class,'fetch_deudores']); /* peticion fetch  */ 
 Route::get('deudor/{idpay}', [Administrador::class,'deudor_idpay']); /* peticion fetch  */ 
 Route::post('email_send', [Administrador::class,'email_sendd']); /* envio email  */ 
+Route::view('chats2', 'chats2')->name('chats2');
 
 Route::get('imprim', function () {
     $dompdf = new Dompdf();

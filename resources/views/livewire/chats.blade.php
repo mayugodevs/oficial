@@ -19,15 +19,14 @@
         <div class="h-12 w-12 p-2 bg-yellow-500 rounded-full text-white font-semibold flex items-center justify-center">
             RA
         </div>
-    </div> --}}
+        </div> --}}
         <!-- end header -->
         <!-- Chatting -->
         {{-- flex sm:flex-row flex-col justify-between --}}
         <div class=" grid sm:grid-cols-6 grid-cols-1 bg-white">
             <!-- chat list -->
             {{--  flex bloqueuno flex-col xl:w-3/5 lg:w-4/5 ml:w-2/5 md:w-5/5 w-full --}}
-            <div
-                class=" col ml:col-span-2 xl:col-span-2 lg:col-span-3 md:col-span-3 col-span-1 border-r-2  border-borderconcours dark:border-gray-650 ">
+            <div  class=" bloqueuno col ml:col-span-2 xl:col-span-2 lg:col-span-3 md:col-span-3 col-span-1 border-r-2  border-borderconcours dark:border-gray-650 ">
                 <!-- search compt -->
                 <div class="pb-4 pt-10 flex justify-between items-center p-4">
                     <div class="flex items-center ">
@@ -137,8 +136,7 @@
             <!-- end chat list -->
             <!-- message -->
             {{-- w-full sm:flex hidden bloquedos flex-col --}}
-            <div
-                class=" col ml:col-span-4 xl:col-span-4 lg:col-span-3 md:col-span-3 col-span-1 justify-between pb-16  pt-6">
+            <div  class="bloquedos col ml:col-span-4 xl:col-span-4 lg:col-span-3 md:col-span-3 col-span-1 justify-between pb-16  pt-6">
                 <div class="flex flex-col pt-0 relative ">
                     <div class="hidden">
                         {{ $openUser }}
