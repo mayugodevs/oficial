@@ -109,6 +109,10 @@ Route::view('tanks','tanks')->name('tanks');
 
 Route::view('regalarCurso','regalarCurso')->name('regalarCurso');
 
+Route::view('CursoPresencial','CursoPresencial')->name('CursoPresencial');
+
+Route::view('ModalidadPresencial','ModalidadPresencial')->name('ModalidadPresencial');
+
 Route::view('comunidad','comunidad');
 // Route::get('/', [HomeController::class,'index'] )->name('inicio'); ******************OBSOLETO
 // Route::get('perfil', [PerfilController::class, 'show'])->name('perfil')->middleware('auth'); ******************OBSOLETO

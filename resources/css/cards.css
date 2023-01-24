@@ -269,6 +269,9 @@
    min-height: 410px;
    
  }
+ .alturapresencial{
+   max-height: 33vh;
+ }
   
 }
 
@@ -284,6 +287,9 @@
   }
   .alturachat{
     min-height: 410px;
+  }
+  .alturapresencial{
+    max-height: 45vh;
   }
    
 }
@@ -308,6 +314,9 @@
 
     .alturachat{
       min-height: 520px;
+    }
+    .alturapresencial{
+      max-height: 45vh;
     }
     
  }
@@ -340,6 +349,9 @@
     }
     .alturachat{
       min-height: 610px;
+    }
+    .alturapresencial{
+      max-height: 50vh;
     }
  }
  @media (min-width: 1280px){
@@ -374,7 +386,9 @@
     .alturachat{
       min-height: 460px;
     }
-
+    .alturapresencial{
+      max-height: 50vh;
+    }
     
  }
  @media (min-width: 1440px){
@@ -403,6 +417,9 @@
     }
     .alturachat{
       min-height: 670px;
+    }
+    .alturapresencial{
+      max-height: 50vh;
     }
  }
 
