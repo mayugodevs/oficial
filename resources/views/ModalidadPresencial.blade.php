@@ -4,7 +4,7 @@
     // Add the new slick-theme.css if you want the default styling
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <div class="dark:bg-gray14 h-full bg-whiteheader ">
-        <div class="containermygo mx-auto pt-40">
+        <div class="containermygo mx-auto sm:pt-40 pt-14">
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-8">
                 <div class=" lg:order-1 order-2 ml:px-0 xl:px-0 lg:px-8 md:px-8 px-4">
                     <div class="flex items-start mb-1  text-left pt-10">
@@ -36,10 +36,10 @@
 
                     </div>
                     <div>
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter text-4xl font-bold pt-1">
+                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter sm:text-4xl text-thirty-two font-bold pt-1">
                             Planificación y Control de la Producción
                         </div>
-                        <div class="text-gray-600 dark:text-pricingdarkstudents pt-4">
+                        <div class="text-gray-600 dark:text-pricingdarkstudents text-sixteen font-inter font-normal pt-4">
                             Las industrias actuales demandan profesionales competentes; con las herramientas y prácticas
                             aprendidas en este curso podrás desarrollarte como ingeniero o analista de costos en cualquier
                             tipo de industria.
@@ -142,7 +142,7 @@
                         <rect x="5" y="5" width="56" height="56" rx="28"
                             stroke="#0A2914" stroke-width="10" />
                     </svg>
-                    <div class="font-medium font-inter text-4xl dark:text-bordersec text-txtnamecomntpkyr pt-6">
+                    <div class="font-medium font-inter sm:text-4xl text-thirty-two dark:text-bordersec text-txtnamecomntpkyr pt-6">
                         ¿Por qué estudiar de manera presencial?
                     </div>
                     <div class="dark:text-pricingdarkstudents text-gray-600 font-inter text-sixteen font-normal pt-5">
@@ -229,9 +229,9 @@
     </div>
 
     <div class="dark:bg-gray14 h-full bg-whiteheader ">
-        <div class="containermygo mx-auto pt-40">
-            <div class="grid lg:grid-cols-5 grid-cols-1 pb-40 xl:px-0 lg:px-8 md:px-8 px-4">
-                <div class="lg:col-span-3 col-span-1 ml:px-0 ">
+        <div class="containermygo mx-auto lg:pt-40 pt-0">
+            <div class="grid lg:grid-cols-5 grid-cols-1 sm:pb-40 pb-10 xl:px-0 lg:px-8 md:px-8 px-4">
+                <div class="lg:col-span-3 col-span-1 ml:px-0 lg:pt-0 pt-12  lg:order-1 order-2">
                     <style>
                         .carousel-open:checked+.carousel-item {
                             position: static;
@@ -239,12 +239,12 @@
                         }
 
                         /* .carousel-bullet {
-                            opacity: 0.2;
-                        } */
+                                opacity: 0.2;
+                            } */
 
                         /* .carousel-indicators:checked + .inline-block + .carousel-bullet{
-                                                               opacity: 1;
-                                                           } */
+                                                                   opacity: 1;
+                                                               } */
                         .carousel-item {
                             -webkit-transition: opacity 0.6s ease-out;
                             transition: opacity 0.6s ease-out;
@@ -255,7 +255,7 @@
                         #carousel-3:checked~.control-3,
                         #carousel-4:checked~.control-4 {
                             display: block;
-                            
+
 
                         }
 
@@ -270,23 +270,21 @@
                             text-align: center;
                             z-index: 10;
                             top: 110%;
-                            
+
 
                         }
 
                         #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
                         #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
                         #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet,
-                        #carousel-4:checked~.control-4~.carousel-indicators li:nth-child(4) .carousel-bullet
-                            {
+                        #carousel-4:checked~.control-4~.carousel-indicators li:nth-child(4) .carousel-bullet {
                             color: #2b6cb0;
                             opacity: 1;
-                            
-                            
+
+
                             /*Set to match the Tailwind colour you want the active one to be */
 
                         }
-                        
                     </style>
 
 
@@ -351,58 +349,68 @@
 
                             </div>
                             <div>
-                                <ol class="carousel-indicators flex h-28 overflow-y-hidden">
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-1"
-                                            class="carousel-bullet grafilado opacity-5 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
+                                <div class="carousel-indicators flex h-24 overflow-y-hidden">
+                                    <div class="inline-block mr-3">
+                                        <label for="carousel-1" onclick="cambiar('cp1')" id="cp1"
+                                            class="carousel-bullet grafilado  cursor-pointer block text-4xl text-white hover:text-blue-700"><img
                                                 src="{{ asset('images/metodologia/presencial1.png') }}"
                                                 alt=""></label>
-                                    </li>
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-2"
-                                            class="carousel-bullet grafilado opacity-5 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
+                                    </div>
+                                    <div class="inline-block mr-3">
+                                        <label for="carousel-2" onclick="cambiar('cp2')" id="cp2"
+                                            class="carousel-bullet grafilado opacity-50 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
                                                 src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
                                                 alt=""></label>
-                                    </li>
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-3"
-                                            class="carousel-bullet grafilado opacity-5 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
+                                    </div>
+                                    <div class="inline-block mr-3">
+                                        <label for="carousel-3" onclick="cambiar('cp3')" id="cp3"
+                                            class="carousel-bullet grafilado opacity-50   cursor-pointer block text-4xl text-white hover:text-blue-700"><img
                                                 src="{{ asset('images/metodologia/Imagehistoria.png') }}"
                                                 alt=""></label>
-                                    </li>
-                                    <li class="inline-block mr-3">
-                                        <label for="carousel-4"
-                                            class="carousel-bullet grafilado opacity-5 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
+                                    </div>
+                                    <div class="inline-block mr-3">
+                                        <label for="carousel-4" onclick="cambiar('cp4')" id="cp4"
+                                            class="carousel-bullet grafilado opacity-50  cursor-pointer block text-4xl text-white hover:text-blue-700"><img
                                                 src="{{ asset('images/metodologia/Imagehome1.png') }}"
                                                 alt=""></label>
-                                    </li>
-                                </ol>
+                                    </div>
+                                </div>
                             </div>
                             <script>
-                                var grafilado=document.querySelectorAll(".grafilado");
-                                /* grafilado.addEventListener("click", function() {
-                                    grafilado.classList.toggle("opacity-0");
+                                function cambiar(pen){
+                                var grafilado = document.getElementsByClassName("grafilado");
+                                document.getElementById(pen).classList.add("opacity-50");
+                                for (let j = 0; j < grafilado.length; j++) {
 
-                                }); */
-                                for (let i = 0; i < grafilado.length; i++) {
-                                    const elemet = grafilado[i];
-                                    elemet.addEventListener("click", function() {
-                                    elemet.classList.toggle("opacity-0");})
-                                    /* elemet.classList.add("opacity-0");
-                                    console.log("si da"); */
+                                    /* const conta = grafilado[j]; */
+
+
+                                  
+                                    
+                                       grafilado[j].classList.add("opacity-100");
+                                        /*   conta.addEventListener("click", function() {
+                                        /*  elemet.classList.add("opacity-0");*/
+                                        
+                                   /*  }) */
+
+                                    
+
+
                                 }
+                                
+                              }
                             </script>
                         </div>
 
 
                     </body>
                 </div>
-                <div class="lg:col-span-2 col-span-1 lg:pt-0 pt-32">
+                <div class="lg:col-span-2 col-span-1 xl:pt-0 ml:pt-0 lg:pt-0 md:pt-20 pt-12 lg:order-2 order-1">
                     <div class="lg:pl-8 pl-0">
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-4xl">
+                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr md:text-left text-center font-inter font-semibold sm:text-4xl text-thirty-two">
                             Lugar adecuado para que aprendas mejor
                         </div>
-                        <div class="text-gray-600 dark:text-pricingdarkstudents font-inter text-sixteen font-normal pt-5">
+                        <div class="text-gray-600 dark:text-pricingdarkstudents md:text-left text-center font-inter text-sixteen font-normal pt-5">
                             El local de 4 estrellas se encuentra en el aeropuerto internacional Jorge Chávez de Lima.
                             Alberga el spa Express. La cadena hotelera Costa del Sol tiene hoteles en las 7 ciudades más
                             importantes de Perú.
@@ -411,7 +419,7 @@
                             pulgadas por cable, WiFi gratuita y baño de mármol.
                             Además, las suites incluyen sala de estar independiente y bañera de hidromasaje.
                         </div>
-                        <div class="flex pt-6 items-center ">
+                        <div class="flex pt-6 items-center justify-center md:justify-start">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -425,7 +433,7 @@
 
 
                         </div>
-                        <div class="flex pt-6 items-center">
+                        <div class="flex pt-6 items-center  justify-center md:justify-start">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -449,7 +457,7 @@
 
             </div>
 
-            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-4xl pt-20 text-center">
+            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-20 text-center xl:px-0 lg:px-8 md:px-8 px-4">
                 Empieza a aprender, ¡es hora de mejorar tu futuro!
             </div>
 
@@ -457,10 +465,10 @@
                 <div class="lg:col-span-3 col-span-1">
                     <div class="flex sm:flex-row flex-col justify-between items-end">
                         <div
-                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-3xl pt-5 text-center">
+                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-twenty-eight text-2xl pt-5 text-center">
                             Contenido del curso presencial
                         </div>
-                        <div class="sm:w-auto w-full">
+                        <div class="sm:w-auto w-full sm:pt-0 pt-6">
                             <button class="bg-bgbtngreen text-center w-full rounded-lg flex px-5 focus:outline-none py-2">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -469,7 +477,8 @@
                                         stroke="#145229" stroke-width="1.66667" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <div class="text-green_especialidad pl-2 text-sixteen font-inter text-center font-semibold">
+                                <div
+                                    class="text-green_especialidad pl-2 text-sixteen font-inter text-center font-semibold">
                                     Descargar temario
                                 </div>
 
@@ -655,9 +664,10 @@
 
                 </div>
                 <div class="lg:col-span-2 col-span-1">
-                    <div class="p-12 dark:bg-gray12 bg-white2 rounded-lg ml-8">
+                    <div class="xl:w-full ml:w-full lg:w-full md:w-2/3 w-full mx-auto">
+                    <div class="sm:px-12 px-4 py-12 dark:bg-gray12 bg-white2 rounded-lg sm:ml-8 ml-0">
                         <div
-                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter pb-4 font-semibold text-4xl  text-center">
+                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter pb-4 font-semibold sm:text-twenty-eight text-2xl  text-center">
                             Curso presencial Ingeniería de costos aplicado a la industria
                         </div>
                         <div class="bg-blue3 h-1 ">
@@ -668,16 +678,16 @@
                         </div>
                         <div class="flex justify-center items-center">
 
-                            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter  font-semibold text-4xl ">
+                            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter  font-semibold sm:text-4xl text-thirty-two ">
                                 $/. 59 USD
                             </div>
                             <div class="flex flex-col pl-6">
-                                <div class="dark:text-white-100 text-black font-inter font-normal text-lg">
+                                <div class="dark:text-white-100 text-black font-inter font-normal sm:text-lg text-sixteen">
 
 
                                     $/. 59 USD
                                 </div>
-                                <div class="text-redtiket line-through font-inter font-normal text-lg ">
+                                <div class="text-redtiket line-through font-inter font-normal sm:text-lg text-sixteen ">
                                     50% Dcto
                                 </div>
                             </div>
@@ -720,21 +730,39 @@
                             </script>
 
                             <div class="  pt-2  font-serif rounded">
-                                <span class="mx-auto text-redtiket text-sixteen font-inter font-medium">la oferta termina
-                                    en :</span>
+                                <div class="text-center text-redtiket text-sixteen font-inter font-medium pt-8 pb-1">la oferta termina
+                                    en :</div>
 
                                 <div class="flex text-center items-center justify-between">
                                     <div class="">
                                         <p class="text-5xl text-redtiket font-bold">00</p>
                                         <p class="text-sm text-redtiket ">Días</p>
                                     </div>
+                                    <div>
+                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
+                                            </svg>
+                                            
+                                    </div>
                                     <div class="">
                                         <p class="text-5xl text-redtiket font-bold" id="hrs">00</p>
                                         <p class="text-sm text-redtiket ">Horas</p>
                                     </div>
+                                    <div>
+                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
+                                            </svg>
+                                            
+                                    </div>
                                     <div class="">
                                         <p class="text-5xl text-redtiket font-bold" id="min">00</p>
                                         <p class="text-sm text-redtiket ">Minutos</p>
+                                    </div>
+                                    <div>
+                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
+                                            </svg>
+                                            
                                     </div>
                                     <div>
                                         <p class="text-5xl text-redtiket font-bold" id="sec">00</p>
@@ -743,23 +771,34 @@
                                 </div>
 
                             </div>
+                            <div class="sm:w-auto w-full sm:pt-8 pt-6">
+                                <button class="bg-bgbtngreen text-center mx-auto  rounded-lg flex px-5 focus:outline-none py-2">
+                                    
+                                    <div
+                                        class="text-green_especialidad pl-2 text-sixteen font-inter text-center font-semibold">
+                                        Comprar ahora
+                                    </div>
+    
+                                </button>
+                            </div>
                         </div>
+                    </div>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-4xl pt-28 text-center">
+            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-12 text-center">
                 Aprende de nuestros mentores expertos
             </div>
-            <div class="containermygo mx-auto pt-40">
+            <div class="containermygo mx-auto sm:pt-40 pt-10">
                 <div class="grid sm:grid-cols-2 grid-cols-1 pb-12 xl:px-0 lg:px-8 md:px-8 px-4">
                     <div>
                         <img class="mx-auto" src="{{ asset('images/metodologia/yugo.png') }}" alt="">
 
                     </div>
-                    <div>
+                    <div class="sm:pt-0 pt-6">
                         <div class="flex pl-3">
                             <svg class="dark:text-blue2 text-blue3" width="21" height="21" viewBox="0 0 21 21"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">

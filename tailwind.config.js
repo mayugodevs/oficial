@@ -111,6 +111,7 @@ module.exports = {
           red_panel:'#DD3730',
           white1:"#DAE5F5",
           white2:"#E9EEF9",
+          moradopromocion:"#371F7A",
           doradopanel:'#DC6803',
           gray_panel:'#374151',
           fondobolsa:'#FCFCFD',

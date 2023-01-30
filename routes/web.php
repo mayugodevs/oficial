@@ -113,6 +113,10 @@ Route::view('CursoPresencial','CursoPresencial')->name('CursoPresencial');
 
 Route::view('ModalidadPresencial','ModalidadPresencial')->name('ModalidadPresencial');
 
+Route::view('Promociones','Promociones')->name('Promociones');
+
+Route::view('lite','lite')->name('lite');
+
 Route::view('comunidad','comunidad');
 // Route::get('/', [HomeController::class,'index'] )->name('inicio'); ******************OBSOLETO
 // Route::get('perfil', [PerfilController::class, 'show'])->name('perfil')->middleware('auth'); ******************OBSOLETO
