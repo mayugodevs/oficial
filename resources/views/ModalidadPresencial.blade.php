@@ -1,8 +1,9 @@
 @extends('layout')
 @section('content')
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    // Add the new slick-theme.css if you want the default styling
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+
     <div class="dark:bg-gray14 h-full bg-whiteheader ">
         <div class="containermygo mx-auto sm:pt-40 pt-14">
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-8">
@@ -18,7 +19,7 @@
                                 fill="Currentcolor" />
                         </svg>
 
-                        <div> <a href=""
+                        <div class="widtlith "> <a href=""
                                 class="text-bgbtnblue  focus:text-bgbtnblue font-inter font-normal text-sm leading-none">Curso-presencial</a>
                         </div>
                         <svg width="20" height="20" class="text-black mt-1 dark:text-white-100" viewBox="0 0 20 20"
@@ -28,15 +29,16 @@
                                 fill="Currentcolor" />
                         </svg>
 
-                        <div>
+                        <div class="widtlith ">
                             <a href="#"
-                                class="dark:text-bgprogresb text-txtnamecomntpkyr dark:focus:text-bgbtnblue dark:hover:text-bgbtnblue font-inter font-normal text-sm leading-none">Ingeniería
+                                class="dark:text-bgprogresb widtlith text-txtnamecomntpkyr dark:focus:text-bgbtnblue dark:hover:text-bgbtnblue font-inter font-normal text-sm leading-none">Ingeniería
                                 de costos aplicados a la industria</a>
                         </div>
 
                     </div>
                     <div>
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter sm:text-4xl text-thirty-two font-bold pt-1">
+                        <div
+                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter sm:text-4xl text-thirty-two font-bold pt-1">
                             Planificación y Control de la Producción
                         </div>
                         <div class="text-gray-600 dark:text-pricingdarkstudents text-sixteen font-inter font-normal pt-4">
@@ -142,7 +144,8 @@
                         <rect x="5" y="5" width="56" height="56" rx="28"
                             stroke="#0A2914" stroke-width="10" />
                     </svg>
-                    <div class="font-medium font-inter sm:text-4xl text-thirty-two dark:text-bordersec text-txtnamecomntpkyr pt-6">
+                    <div
+                        class="font-medium font-inter sm:text-4xl text-thirty-two dark:text-bordersec text-txtnamecomntpkyr pt-6">
                         ¿Por qué estudiar de manera presencial?
                     </div>
                     <div class="dark:text-pricingdarkstudents text-gray-600 font-inter text-sixteen font-normal pt-5">
@@ -232,185 +235,414 @@
         <div class="containermygo mx-auto lg:pt-40 pt-0">
             <div class="grid lg:grid-cols-5 grid-cols-1 sm:pb-40 pb-10 xl:px-0 lg:px-8 md:px-8 px-4">
                 <div class="lg:col-span-3 col-span-1 ml:px-0 lg:pt-0 pt-12  lg:order-1 order-2">
-                    <style>
-                        .carousel-open:checked+.carousel-item {
-                            position: static;
-                            opacity: 100;
-                        }
 
-                        /* .carousel-bullet {
-                                opacity: 0.2;
-                            } */
-
-                        /* .carousel-indicators:checked + .inline-block + .carousel-bullet{
-                                                                   opacity: 1;
-                                                               } */
-                        .carousel-item {
-                            -webkit-transition: opacity 0.6s ease-out;
-                            transition: opacity 0.6s ease-out;
-                        }
-
-                        #carousel-1:checked~.control-1,
-                        #carousel-2:checked~.control-2,
-                        #carousel-3:checked~.control-3,
-                        #carousel-4:checked~.control-4 {
-                            display: block;
+                    <div>
+                        <div class="grid grid-cols-1 carrousel">
 
 
-                        }
+                            <div class="overflow-hidden ">
+                                <div class=" flex flex-row   grande deslis " id="deslis">
 
-                        .carousel-indicators {
-                            list-style: none;
-                            margin: 0;
-                            padding: 0;
-                            position: absolute;
-                            bottom: 0%;
-                            left: 0;
-                            right: 0;
-                            text-align: center;
-                            z-index: 10;
-                            top: 110%;
+                                    <div class="sliderSeccion   " id="foto1">
+                                        <img src="{{ asset('images/metodologia/presencial1.png') }}"
+                                            class="sm:flex hidden">
+                                        <img src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
+                                        class="sm:hidden flex">
 
-
-                        }
-
-                        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
-                        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
-                        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet,
-                        #carousel-4:checked~.control-4~.carousel-indicators li:nth-child(4) .carousel-bullet {
-                            color: #2b6cb0;
-                            opacity: 1;
-
-
-                            /*Set to match the Tailwind colour you want the active one to be */
-
-                        }
-                    </style>
-
-
-
-                    <body class=" font-sans leading-normal tracking-normal">
-
-                        <div class="carousel relative shadow-2xl ">
-                            <div class="carousel-inner relative overflow-hidden w-full ">
-                                <!--Slide 1-->
-                                <input class="carousel-open" type="radio" id="carousel-1" name="carousel"
-                                    aria-hidden="true" hidden="" checked="checked">
-                                <div class="carousel-item absolute opacity-0 alturapresencial">
-                                    <div class="block h-full w-full bg-indigo-5 text-white text-5xl text-center"><img
-                                            class="w-full" src="{{ asset('images/metodologia/presencial1.png') }}"></div>
-                                </div>
-                                {{-- <label for="carousel-3"
-                                    class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-2"
-                                    class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-                                   --}}
-                                <!--Slide 2-->
-                                <input class="carousel-open" type="radio" id="carousel-2" name="carousel"
-                                    aria-hidden="true" hidden="">
-                                <div class="carousel-item absolute opacity-0 alturapresencial">
-                                    <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center"><img
-                                            class="w-full " src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
-                                            alt=""></div>
-                                </div>
-                                {{--   <label for="carousel-1"
-                                    class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-3"
-                                    class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-                                   --}}
-                                <!--Slide 3-->
-                                <input class="carousel-open" type="radio" id="carousel-3" name="carousel"
-                                    aria-hidden="true" hidden="">
-                                <div class="carousel-item absolute opacity-0 alturapresencial">
-                                    <div class="block h-full w-full bg-green-500 text-white text-5xl text-center"><img
-                                            class="w-full" src="{{ asset('images/metodologia/Imagehistoria.png') }}"
-                                            alt=""></div>
-                                </div>
-                                {{--  <label for="carousel-2"
-                                    class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-1"
-                                    class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-                                     --}}
-                                <!--Slide 4-->
-                                <input class="carousel-open" type="radio" id="carousel-4" name="carousel"
-                                    aria-hidden="true" hidden="">
-                                <div class="carousel-item absolute opacity-0 alturapresencial">
-                                    <div class="block h-full w-full bg-green-500 text-white text-5xl text-center"><img
-                                            class="w-full h-full" src="{{ asset('images/metodologia/Imagehome1.png') }}"
-                                            alt=""></div>
-                                </div>
-                                {{--  <label for="carousel-2"
-                                    class="prev control-4 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                                <label for="carousel-1"
-                                    class="next control-4 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-                                  --}}
-                                <!-- Add additional indicators for each slide-->
-
-
-                            </div>
-                            <div>
-                                <div class="carousel-indicators flex h-24 overflow-y-hidden">
-                                    <div class="inline-block mr-3">
-                                        <label for="carousel-1" onclick="cambiar('cp1')" id="cp1"
-                                            class="carousel-bullet grafilado  cursor-pointer block text-4xl text-white hover:text-blue-700"><img
-                                                src="{{ asset('images/metodologia/presencial1.png') }}"
-                                                alt=""></label>
                                     </div>
-                                    <div class="inline-block mr-3">
-                                        <label for="carousel-2" onclick="cambiar('cp2')" id="cp2"
-                                            class="carousel-bullet grafilado opacity-50 cursor-pointer block text-4xl text-white hover:text-blue-700"><img
-                                                src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
-                                                alt=""></label>
+
+                                    <div class="sliderSeccion bg-cover" id="foto2">
+                                        <img class="bg-cover h-full " 
+                                        src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
+                                            alt="">
                                     </div>
-                                    <div class="inline-block mr-3">
-                                        <label for="carousel-3" onclick="cambiar('cp3')" id="cp3"
-                                            class="carousel-bullet grafilado opacity-50   cursor-pointer block text-4xl text-white hover:text-blue-700"><img
-                                                src="{{ asset('images/metodologia/Imagehistoria.png') }}"
-                                                alt=""></label>
+                                    <div class="sliderSeccion " id="foto3">
+                                        <img class="h-full " src="{{ asset('images/metodologia/Imagehistoria.png') }}" alt="">
                                     </div>
-                                    <div class="inline-block mr-3">
-                                        <label for="carousel-4" onclick="cambiar('cp4')" id="cp4"
-                                            class="carousel-bullet grafilado opacity-50  cursor-pointer block text-4xl text-white hover:text-blue-700"><img
-                                                src="{{ asset('images/metodologia/Imagehome1.png') }}"
-                                                alt=""></label>
+
+                                    <div class="sliderSeccion " id="foto4">
+                                        <img class="h-full" src="{{ asset('images/metodologia/Imagehome1.png') }}" alt="">
                                     </div>
+
+
+
+
                                 </div>
-                            </div>
-                            <script>
-                                function cambiar(pen){
-                                var grafilado = document.getElementsByClassName("grafilado");
-                                document.getElementById(pen).classList.add("opacity-50");
-                                for (let j = 0; j < grafilado.length; j++) {
-
-                                    /* const conta = grafilado[j]; */
-
-
-                                  
-                                    
-                                       grafilado[j].classList.add("opacity-100");
-                                        /*   conta.addEventListener("click", function() {
-                                        /*  elemet.classList.add("opacity-0");*/
+                                <div class=" grid grid-cols-4  ">
+                                    <label class=" difuso   bg-green py-0.5 cus" for="foto1" id="bc1">
                                         
-                                   /*  }) */
+                                    </label>
+                                    <label class="difuso   py-0.5   bg-transparent " for="foto2" id="bc2">
+                                        
+                                    </label>
+                                    <label class="difuso  py-0.5  bg-transparent " for="foto3" id="bc3">
+                                        
+                                    </label>
+                                    <label class="difuso  py-0.5  bg-transparent " for="foto4" id="bc4">
+                                       </label>
+                                </div>
 
-                                    
+                            </div>
+                            
 
+
+                            <div class="lg:pt-12 pt-10    justify-between flex">
+
+                                <div class="sm:pt-0 ">
+                                    <div class="gap-x-3 grid grid-cols-4 puntos ">
+                                        <label class=" difuso punto   bg-gray-400   punto cursor-pointer cis " for="foto1" id="bg1">
+                                            <img class="h-full" src="{{ asset('images/metodologia/presencial1.png') }}" alt="">
+                                        </label>
+                                        <label class="  difuso punto    bg-gray-400 punto cursor-pointer" for="foto2" id="bg2">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Contentscritorio1.png') }}">
+                                        </label>
+                                        <label class=" difuso punto   bg-gray-400 punto cursor-pointer" for="foto3" id="bg3">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Imagehistoria.png') }}" alt="">
+                                        </label>
+                                        <label class=" difuso punto   bg-gray-400 punto cursor-pointer" for="foto4" id="bg4">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Imagehome1.png') }}" alt="">
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                           {{--  <script>
+                                var bg1= document.getElementById("bg1");
+                                var bc1= document.getElementById("bc1");
+                                bg1.addEventListener('click',function(){
+                                   bc1.classList.toggle("bg-green");
+                                      });
+                                var bg2= document.getElementById("bg2");
+                                var bc2= document.getElementById("bc2");
+                                bg2.addEventListener('click',function(){
+                                   bc2.classList.toggle("bg-green");
+                                      });
+                                var bg3= document.getElementById("bg3");
+                                var bc3= document.getElementById("bc3");
+                                bg3.addEventListener('click',function(){
+                                   bc3.classList.toggle("bg-green");
+                                      });
+                                 var bg4= document.getElementById("bg4");
+                                var bc4= document.getElementById("bc4");
+                                bg4.addEventListener('click',function(){
+                                   bc4.classList.toggle("bg-green");
+                                      });
+
+                            </script> --}}
+
+                            <style>
+                                .carrousel .grande {
+                                    width: 400%;
+                                    transition: all .5s ease;
+
+                                    transform: translateX(0%);
+                                }
+
+
+                                .sliderSeccion {
+                                    width: 100%;
 
                                 }
+
+                                .puntos .difuso {
+                                    opacity: 0.5;
+
+                                }
+
+                                .puntos .circulo {
+                                    border:;
+                                    border-style: ;
+
+                                }
+                            </style>
+
+                            <script>
+                                const grande = document.querySelector('.grande');
+                                const punto = document.querySelectorAll('.punto');
+
+                                /* cambia cuando das click */
+                                punto.forEach((cadaPunto, i) => {
+                                    punto[i].addEventListener('click', () => {
+                                        let posicion = i
+                                        let operacion = posicion * (-25)
+
+                                        grande.style.transform = `translateX(${operacion}%)`
+
+
+                                        punto.forEach((cadaPunto, i) => {
+                                            punto[i].classList.add('difuso')
+                                            punto[i].classList.add('circulo')
+
+
+                                        })
+                                        punto[i].classList.remove('difuso')
+                                        punto[i].classList.remove('circulo')
+
+                                    })
+
+                                });
+
+
+
+                                /*   para seguiemiento mientras rota */
+
+                                setTimeout(function() {
+                                    for (var i = 0; i < punto.length; i++) {
+
+                                        punto[0].style.backgroundColor = 'blue';
+                                        i++
+                                    }
+
+                                }, 3000);
+                            </script>
+
+                             <script>
+                               
+                                let deslis =document.querySelector("#deslis");
+                                let sliderSeccion = document.querySelectorAll(".sliderSeccion");
+                                let sliderlast = sliderSeccion[sliderSeccion.length -1];
+    
+                                deslis.insertAdjacentElement('afterbegin', sliderlast);
+    
+                                function Next() {
+                                    let sliderFirst = document.querySelectorAll(".sliderSeccion")[0];
+    
+                                    deslis.style.marginLeft = "-100%";
+                                    deslis.style.transition = "all 0.5s";
+                                    
+                                    setTimeout(function() {
+                                        deslis.style.transition = "none";
+                                        deslis.insertAdjacentElement('beforeend', sliderFirst);
+                                        deslis.style.marginLeft = "-100%";
+    
+                                    }, 500);
+    
+                                }
+    
+                                const btnrigth= document.querySelector("#btnrigth");
                                 
-                              }
+                                btnrigth.addEventListener('click',function(){
+                                    Next();
+                                });
+    
+                                setInterval(function() {
+                                    Next();
+                                }, 1000);
                             </script>
                         </div>
 
 
-                    </body>
+                        {{-- <div>
+                            <div class="grid grid-cols-2 carrousel">
+
+
+                                <div class="overflow-hidden ">
+                                    <div class=" flex flex-row   grande deslis " id="deslis">
+
+                                        <div class="sliderSeccion  " id="foto1">
+
+                                            <img src="../images/metodologia/Sectionfotovideo1.png" alt=""
+                                                class="sm:flex hidden">
+                                            <img src="../images/metodologia/imagehistoria.png" alt=""
+                                                class="sm:hidden flex">
+
+                                        </div>
+
+                                        <div class="sliderSeccion " id="foto2">
+                                            <img class="bg-cover"
+                                                src="https://www.ipchile.cl/wp-content/uploads/2021/10/Ing.-Industrial.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="sliderSeccion " id="foto3">
+                                            <img src="https://boyacaestudiaenelexterior.co/wp-content/uploads/2021/05/Ingenieria-Industrial.jpg"
+                                                alt="">
+                                        </div>
+
+                                        <div class="sliderSeccion " id="foto4">
+                                            <img src="https://d11cuk1a0j5b57.cloudfront.net/blog/wp-content/uploads/2018/05/ingenieria-industrial-razones-estudiar-occeducacion-occmundial.jpg"
+                                                alt="">
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="">
+                                        <button class="btnrigth text-white-300" id="btnrigth">
+                                            siguiente
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+                                <div
+                                    class="lg:pt-12 pt-10   mb-7 lg:mr-12 mr-8 lg:ml-0 ml-8 justify-between flex-col flex">
+                                    <div>
+                                        <div
+                                            class="text-2xl   dark:text-white-500 text-gray-500 font-inter font-medium leading-8">
+                                            "En MayuGo se aprende muchisimo el equipo de docentes que inparten las clases,
+                                            la
+                                            inparten
+                                            de una manera que
+                                            quedas muy satisfecho en querer seguir tomando mas conocimiento profecional"
+                                        </div>
+                                        <div class="flex sm:flex-row flex-col pt-9">
+                                            <div
+                                                class="font-inter  font-lg dark:text-borderconcours text-txtnamecomntpkyr">
+                                                kenny espiriu
+                                                falcon estudiante de</div>
+                                            <div class="text-greenhover  font-semibold sm:px-2 px-0">MayuGo</div>
+                                        </div>
+                                    </div>
+                                    <div class="sm:pt-0 ">
+                                        <div class="gap-x-10 flex puntos ">
+                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400  punto cursor-pointer "
+                                                for="foto1"></label>
+                                            <label class="w-8 h-8  difuso   rounded-full bg-gray-400 punto cursor-pointer"
+                                                for="foto2"></label>
+                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400 punto cursor-pointer"
+                                                for="foto3"></label>
+                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400 punto cursor-pointer"
+                                                for="foto4"></label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <style>
+                                    .carrousel .grande {
+                                        width: 400%;
+                                        transition: all .5s ease;
+
+                                        transform: translateX(0%);
+                                    }
+
+
+                                    .sliderSeccion {
+                                        width: 100%;
+
+                                    }
+
+                                    .puntos .difuso {
+                                        opacity: 0.1;
+
+                                    }
+
+                                    .puntos .circulo {
+                                        border: #145229;
+                                        border-style: solid;
+
+                                    }
+                                </style>
+
+                                <script>
+                                    const grande = document.querySelector('.grande');
+                                    const punto = document.querySelectorAll('.punto');
+
+                                    /* cambia cuando das click */
+                                    punto.forEach((cadaPunto, i) => {
+                                        punto[i].addEventListener('click', () => {
+                                            let posicion = i
+                                            let operacion = posicion * (-25)
+
+                                            grande.style.transform = `translateX(${operacion}%)`
+
+
+                                            punto.forEach((cadaPunto, i) => {
+                                                punto[i].classList.add('difuso')
+                                                punto[i].classList.add('circulo')
+
+
+                                            })
+                                            punto[i].classList.remove('difuso')
+                                            punto[i].classList.remove('circulo')
+
+                                        })
+
+                                    });
+
+
+
+                                    /*   para seguiemiento mientras rota */
+
+                                    setTimeout(function() {
+                                        for (var i = 0; i < punto.length; i++) {
+
+                                            punto[0].style.backgroundColor = 'blue';
+                                            i++
+                                        }
+
+                                    }, 3000);
+                                </script>
+
+                                <script>
+                                    let deslis = document.querySelector("#deslis");
+                                    let sliderSeccion = document.querySelectorAll(".sliderSeccion");
+                                    let sliderlast = sliderSeccion[sliderSeccion.length - 1];
+
+                                    deslis.insertAdjacentElement('afterbegin', sliderlast);
+
+                                    function Next() {
+                                        let sliderFirst = document.querySelectorAll(".sliderSeccion")[0];
+
+                                        deslis.style.marginLeft = "-100%";
+                                        deslis.style.transition = "all 0.5s";
+
+                                        setTimeout(function() {
+                                            deslis.style.transition = "none";
+                                            deslis.insertAdjacentElement('beforeend', sliderFirst);
+                                            deslis.style.marginLeft = "-100%";
+
+                                        }, 500);
+
+                                    }
+
+                                    const btnrigth = document.querySelector("#btnrigth");
+
+                                    btnrigth.addEventListener('click', function() {
+                                        Next();
+                                    });
+
+                                    setInterval(function() {
+                                        Next();
+                                    }, 5000);
+                                </script>
+                            </div>
+
+                        </div> --}}
+                        <div>
+                            <div class="single-item">
+                                <div>your 1</div>
+                                <div>your 2</div>
+                                <div>your 3</div>
+                                <div>your 4</div>
+                                <div>your 5</div>
+                            </div>
+
+                            <script type="text/javascript">
+                            
+                                $(document).ready(function(){
+                                    $('.single-item').slick();
+                                });
+                              </script>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="lg:col-span-2 col-span-1 xl:pt-0 ml:pt-0 lg:pt-0 md:pt-20 pt-12 lg:order-2 order-1">
                     <div class="lg:pl-8 pl-0">
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr md:text-left text-center font-inter font-semibold sm:text-4xl text-thirty-two">
+                        <div
+                            class="dark:text-bgprogresb text-txtnamecomntpkyr md:text-left text-center font-inter font-semibold sm:text-4xl text-thirty-two">
                             Lugar adecuado para que aprendas mejor
                         </div>
-                        <div class="text-gray-600 dark:text-pricingdarkstudents md:text-left text-center font-inter text-sixteen font-normal pt-5">
+                        <div
+                            class="text-gray-600 dark:text-pricingdarkstudents md:text-left text-center font-inter text-sixteen font-normal pt-5">
                             El local de 4 estrellas se encuentra en el aeropuerto internacional Jorge Chávez de Lima.
                             Alberga el spa Express. La cadena hotelera Costa del Sol tiene hoteles en las 7 ciudades más
                             importantes de Perú.
@@ -457,7 +689,8 @@
 
             </div>
 
-            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-20 text-center xl:px-0 lg:px-8 md:px-8 px-4">
+            <div
+                class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-20 text-center xl:px-0 lg:px-8 md:px-8 px-4">
                 Empieza a aprender, ¡es hora de mejorar tu futuro!
             </div>
 
@@ -665,131 +898,146 @@
                 </div>
                 <div class="lg:col-span-2 col-span-1">
                     <div class="xl:w-full ml:w-full lg:w-full md:w-2/3 w-full mx-auto">
-                    <div class="sm:px-12 px-4 py-12 dark:bg-gray12 bg-white2 rounded-lg sm:ml-8 ml-0">
-                        <div
-                            class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter pb-4 font-semibold sm:text-twenty-eight text-2xl  text-center">
-                            Curso presencial Ingeniería de costos aplicado a la industria
-                        </div>
-                        <div class="bg-blue3 h-1 ">
-
-                        </div>
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-sm pt-6">
-                            PAGO ÚNICO
-                        </div>
-                        <div class="flex justify-center items-center">
-
-                            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter  font-semibold sm:text-4xl text-thirty-two ">
-                                $/. 59 USD
+                        <div class="sm:px-12 px-4 py-12 dark:bg-gray12 bg-white2 rounded-lg sm:ml-8 ml-0">
+                            <div
+                                class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter pb-4 font-semibold sm:text-twenty-eight text-2xl  text-center">
+                                Curso presencial Ingeniería de costos aplicado a la industria
                             </div>
-                            <div class="flex flex-col pl-6">
-                                <div class="dark:text-white-100 text-black font-inter font-normal sm:text-lg text-sixteen">
+                            <div class="bg-blue3 h-1 ">
 
+                            </div>
+                            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold text-sm pt-6">
+                                PAGO ÚNICO
+                            </div>
+                            <div class="flex justify-center items-center">
 
+                                <div
+                                    class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter  font-semibold sm:text-4xl text-thirty-two ">
                                     $/. 59 USD
                                 </div>
-                                <div class="text-redtiket line-through font-inter font-normal sm:text-lg text-sixteen ">
-                                    50% Dcto
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-
-
-                            <script type="text/javascript">
-                                const getRemainingTime = deadline => {
-                                    let now = new Date(),
-                                        remainTime = (new Date(deadline) - now + 1000) / 1000,
-                                        remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
-                                        remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
-                                        remainHours = ('0' + Math.floor(remainTime / 3600 % 2)).slice(-
-                                            2), //ese % 2 se cambia por 24 para que funcione normal
-                                        remainDays = Math.floor(remainTime / (3600 * 24));
-                                    return {
-                                        remainSeconds,
-                                        remainMinutes,
-                                        remainHours,
-                                        remainDays,
-                                        remainTime
-                                    }
-                                };
-                                const countdown = (deadline, elem, finalMessage) => {
-                                    const el = document.getElementById(elem);
-                                    const timerUpdate = setInterval(() => {
-                                        let t = getRemainingTime(deadline);
-                                        document.getElementById('hrs').innerHTML = `${t.remainHours}`;
-                                        document.getElementById('min').innerHTML = `${t.remainMinutes}`;
-                                        document.getElementById('sec').innerHTML = `${t.remainSeconds}`;
-
-                                        if (t.remainTime <= 1) {
-                                            clearInterval(timerUpdate);
-                                            el.innerHTML = finalMessage;
-                                        }
-                                    }, 1000)
-                                };
-                                countdown('November 27 2024 23:59:00 GMT-0500', 'clock1', '¡Agotado!');
-                            </script>
-
-                            <div class="  pt-2  font-serif rounded">
-                                <div class="text-center text-redtiket text-sixteen font-inter font-medium pt-8 pb-1">la oferta termina
-                                    en :</div>
-
-                                <div class="flex text-center items-center justify-between">
-                                    <div class="">
-                                        <p class="text-5xl text-redtiket font-bold">00</p>
-                                        <p class="text-sm text-redtiket ">Días</p>
-                                    </div>
-                                    <div>
-                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
-                                            </svg>
-                                            
-                                    </div>
-                                    <div class="">
-                                        <p class="text-5xl text-redtiket font-bold" id="hrs">00</p>
-                                        <p class="text-sm text-redtiket ">Horas</p>
-                                    </div>
-                                    <div>
-                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
-                                            </svg>
-                                            
-                                    </div>
-                                    <div class="">
-                                        <p class="text-5xl text-redtiket font-bold" id="min">00</p>
-                                        <p class="text-sm text-redtiket ">Minutos</p>
-                                    </div>
-                                    <div>
-                                        <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z" fill="#FF897A"/>
-                                            </svg>
-                                            
-                                    </div>
-                                    <div>
-                                        <p class="text-5xl text-redtiket font-bold" id="sec">00</p>
-                                        <p class="text-sm text-redtiket ">Seg</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="sm:w-auto w-full sm:pt-8 pt-6">
-                                <button class="bg-bgbtngreen text-center mx-auto  rounded-lg flex px-5 focus:outline-none py-2">
-                                    
+                                <div class="flex flex-col pl-6">
                                     <div
-                                        class="text-green_especialidad pl-2 text-sixteen font-inter text-center font-semibold">
-                                        Comprar ahora
+                                        class="dark:text-white-100 text-black font-inter font-normal sm:text-lg text-sixteen">
+
+
+                                        $/. 59 USD
                                     </div>
-    
-                                </button>
+                                    <div
+                                        class="text-redtiket line-through font-inter font-normal sm:text-lg text-sixteen ">
+                                        50% Dcto
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+
+                                <script type="text/javascript">
+                                    const getRemainingTime = deadline => {
+                                        let now = new Date(),
+                                            remainTime = (new Date(deadline) - now + 1000) / 1000,
+                                            remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+                                            remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+                                            remainHours = ('0' + Math.floor(remainTime / 3600 % 2)).slice(-
+                                                2), //ese % 2 se cambia por 24 para que funcione normal
+                                            remainDays = Math.floor(remainTime / (3600 * 24));
+                                        return {
+                                            remainSeconds,
+                                            remainMinutes,
+                                            remainHours,
+                                            remainDays,
+                                            remainTime
+                                        }
+                                    };
+                                    const countdown = (deadline, elem, finalMessage) => {
+                                        const el = document.getElementById(elem);
+                                        const timerUpdate = setInterval(() => {
+                                            let t = getRemainingTime(deadline);
+                                            document.getElementById('hrs').innerHTML = `${t.remainHours}`;
+                                            document.getElementById('min').innerHTML = `${t.remainMinutes}`;
+                                            document.getElementById('sec').innerHTML = `${t.remainSeconds}`;
+
+                                            if (t.remainTime <= 1) {
+                                                clearInterval(timerUpdate);
+                                                el.innerHTML = finalMessage;
+                                            }
+                                        }, 1000)
+                                    };
+                                    countdown('November 27 2024 23:59:00 GMT-0500', 'clock1', '¡Agotado!');
+                                </script>
+
+                                <div class="  pt-2  font-serif rounded">
+                                    <div class="text-center text-redtiket text-sixteen font-inter font-medium pt-8 pb-1">la
+                                        oferta termina
+                                        en :</div>
+
+                                    <div class="flex text-center items-center justify-between">
+                                        <div class="">
+                                            <p class="text-5xl text-redtiket font-bold">00</p>
+                                            <p class="text-sm text-redtiket ">Días</p>
+                                        </div>
+                                        <div>
+                                            <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z"
+                                                    fill="#FF897A" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="">
+                                            <p class="text-5xl text-redtiket font-bold" id="hrs">00</p>
+                                            <p class="text-sm text-redtiket ">Horas</p>
+                                        </div>
+                                        <div>
+                                            <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z"
+                                                    fill="#FF897A" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="">
+                                            <p class="text-5xl text-redtiket font-bold" id="min">00</p>
+                                            <p class="text-sm text-redtiket ">Minutos</p>
+                                        </div>
+                                        <div>
+                                            <svg class="-mt-4" width="7" height="21" viewBox="0 0 7 21"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.72869 20.2812C2.95313 20.2812 2.28835 20.0085 1.73438 19.4631C1.1804 18.9176 0.907671 18.2528 0.916193 17.4688C0.907671 16.7017 1.1804 16.0455 1.73438 15.5C2.28835 14.9545 2.95313 14.6818 3.72869 14.6818C4.47869 14.6818 5.13068 14.9545 5.68466 15.5C6.24716 16.0455 6.53267 16.7017 6.54119 17.4688C6.53267 17.9886 6.39631 18.4616 6.1321 18.8878C5.87642 19.3139 5.53551 19.6548 5.10938 19.9105C4.69176 20.1577 4.23153 20.2812 3.72869 20.2812ZM3.72869 6.26989C2.95313 6.26989 2.28835 5.99716 1.73438 5.4517C1.1804 4.89773 0.907671 4.23295 0.916193 3.45739C0.907671 2.69034 1.1804 2.03409 1.73438 1.48864C2.28835 0.934659 2.95313 0.65767 3.72869 0.65767C4.47869 0.65767 5.13068 0.934659 5.68466 1.48864C6.24716 2.03409 6.53267 2.69034 6.54119 3.45739C6.53267 3.96875 6.39631 4.4375 6.1321 4.86364C5.87642 5.28977 5.53551 5.63068 5.10938 5.88636C4.69176 6.14204 4.23153 6.26989 3.72869 6.26989Z"
+                                                    fill="#FF897A" />
+                                            </svg>
+
+                                        </div>
+                                        <div>
+                                            <p class="text-5xl text-redtiket font-bold" id="sec">00</p>
+                                            <p class="text-sm text-redtiket ">Seg</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="sm:w-auto w-full sm:pt-8 pt-6">
+                                    <button
+                                        class="bg-bgbtngreen text-center mx-auto  rounded-lg flex px-5 focus:outline-none py-2">
+
+                                        <div
+                                            class="text-green_especialidad pl-2 text-sixteen font-inter text-center font-semibold">
+                                            Comprar ahora
+                                        </div>
+
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-12 text-center">
+            <div
+                class="dark:text-bgprogresb text-txtnamecomntpkyr font-inter font-semibold sm:text-4xl text-thirty-two pt-12 text-center">
                 Aprende de nuestros mentores expertos
             </div>
             <div class="containermygo mx-auto sm:pt-40 pt-10">
@@ -1062,22 +1310,10 @@
                 </button>
             </div>
         </div>
-        {{-- <script>
-        $('.your-slider').slick('unslick');    
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
 
-          
-$('.slider-nav').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  dots: true,
-  centerMode: true,
-  focusOnSelect: true
-});
-	
-        </script> --}}
+
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
 @endsection

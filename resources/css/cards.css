@@ -257,6 +257,10 @@
     opacity: 1 !important;
 
 } */
+ 
+input:checked + div svg {  
+  @apply block;  
+}
 .switchdark{
     width: 16px;
     height: 16px;
@@ -272,6 +276,12 @@
  .alturapresencial{
    max-height: 33vh;
  }
+ .widtlith{
+  width: 150px;
+  overflow-x: hidden;
+  height: 20px;
+  overflow-y: hidden;
+ } 
   
 }
 
@@ -344,6 +354,10 @@
     .chatswidth{
       max-width: 930px;
     }
+    .contedorigth{
+      max-width: 380px;
+      margin-right: auto;
+    }
     .chatswidth{
       max-width: 470px;
     }
@@ -372,11 +386,11 @@
       padding-right: 95px;
     }
     .contenidoml{
-      max-width: 698px;
+      max-width: 680px;
       margin-left: auto;
     }
     .contedorigth{
-      max-width: 500px;
+      max-width: 455px;
       margin-right: auto;
     }
     .chatswidth{
@@ -411,6 +425,10 @@
     .contenidoml{
       max-width: 832px;
       margin-left: auto;
+    }
+    .contedorigth{
+      max-width: 520px;
+      margin-right: auto;
     }
     .chatswidth{
       max-width: 933px;
@@ -460,6 +478,12 @@ line-height: 180%;
     position: relative;
     max-width: 100%;
     float: left;
+}
+.tenue{
+  opacity: 0.5;
+}
+.tenuefuerte{
+  opacity: 1;
 }
 .img-shadow::before {
     content: "";
@@ -596,7 +620,7 @@ font-size: 14px;
 line-height: 20px;
 }
 .btnnavplayero{
-    @apply h-14 flex items-center justify-center cursor-pointer border-b border-bordersec;
+    @apply h-14 flex items-center justify-center cursor-pointer border-b border-bordersec text-borderconcours;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;

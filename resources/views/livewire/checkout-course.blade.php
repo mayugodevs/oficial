@@ -15,7 +15,7 @@
     </style>
 
     <div class="dark:bg-pricingcintadark bg-bgfondopricingwhite  flex">
-        <div class="containermygo mx-auto flex items-center justify-between py-7">
+        <div class="containermygo mx-auto flex items-center lg:pr-0 pr-4  justify-between py-7">
             <div class="flex items-center pl-3">
                 <div>
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -44,13 +44,17 @@
 
                 </div>
             </div>
-            <div class="text-txtcommentply dark:text-borderconcours font-inter font-medium text-sixteen sm:flex hidden">
+            <div
+                class="text-txtcommentply dark:text-borderconcours  font-inter font-medium text-sixteen sm:flex hidden">
                 ¿Necesitas ayuda con tu compra?
             </div>
         </div>
 
     </div>
     <div class="  flex-col lg:flex-row flex ">
+        
+            
+        
         {{-- checkizquier py-20 lg:pr-28 pr-4 --}}
         <div class="dark:bg-gray14 lg:w-7/12 w-full bg-whiteheader ">
             <div class="contenidoml   ">
@@ -3341,7 +3345,7 @@
                                                 element.addEventListener('click', function() {
                                                     namecard.classList.toggle('hidden');
                                                     listconte.classList.toggle('hidden');
-                                                    
+
 
                                                 });
                                             }
@@ -3513,9 +3517,9 @@
                                     </div>
                                 </li>
                             @empty
-                               <div class="hidden">
-                                   vacio
-                               </div>
+                                <div class="hidden">
+                                    vacio
+                                </div>
                             @endforelse
 
                         </ul>
@@ -3523,17 +3527,8 @@
                     {{-- @if (count($this->products) > 0) --}}
                     @if (true)
 
-                        <div class="dark:text-bgprogresb text-txtnamecomntpkyr text-sm font-inter font-normal pt-6">
-                            <div class="flex justify-between">
-                                <div>
-                                    Total :
-                                </div>
-                                <div>
-                                    {{ $simbolo }} {{ $total * $cambio }}
-
-                                </div>
-
-                            </div>
+                        <div class="dark:text-borderconcours text-txtnamecomntpkyr text-sm font-inter font-normal pt-6">
+                            
                             <div class="flex justify-between pt-2">
                                 <div>
                                     Ahorras
@@ -3561,27 +3556,27 @@
                                     <span>Cupón:
 
                                     </span>
-                                    <div>
+                                    <div class="pl-2">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M7 2.45042L7.49983 2.89157C7.49067 2.90195 7.48119 2.91203 7.47141 2.92182L7 2.45042ZM2.4514 8.99902L2.89255 8.49919C2.90293 8.50835 2.91302 8.51783 2.9228 8.52762L2.4514 8.99902ZM2.33334 7.11708L1.83351 6.67592C1.84267 6.66555 1.85215 6.65546 1.86194 6.64567L2.33334 7.11708ZM8.88194 13.6657L9.35335 14.1371C9.34356 14.1469 9.33348 14.1564 9.3231 14.1655L8.88194 13.6657ZM7.11806 13.6657L6.67691 14.1655C6.66653 14.1564 6.65644 14.1469 6.64666 14.1371L7.11806 13.6657ZM13.5486 8.99902L13.0772 8.52762L13.0919 8.51293L13.1075 8.49919L13.5486 8.99902ZM11.3333 3.99902C11.7015 3.99902 12 4.2975 12 4.66569C12 5.03388 11.7015 5.33236 11.3333 5.33236V3.99902ZM11.3267 5.33236C10.9585 5.33236 10.66 5.03388 10.66 4.66569C10.66 4.2975 10.9585 3.99902 11.3267 3.99902V5.33236ZM13.3333 4.66569C13.3333 3.56112 12.4379 2.66569 11.3333 2.66569V1.33236C13.1743 1.33236 14.6667 2.82474 14.6667 4.66569H13.3333ZM13.3333 7.99902V4.66569H14.6667V7.99902H13.3333ZM11.3333 2.66569H8V1.33236H11.3333V2.66569ZM8 2.66569C7.80098 2.66569 7.62296 2.75206 7.49983 2.89157L6.50018 2.00926C6.86567 1.59515 7.40256 1.33236 8 1.33236V2.66569ZM2.66667 7.99902C2.66667 8.19804 2.75305 8.37606 2.89255 8.49919L2.01024 9.49885C1.59614 9.13335 1.33334 8.59646 1.33334 7.99902H2.66667ZM2.83317 7.55823C2.72908 7.67616 2.66667 7.82949 2.66667 7.99902H1.33334C1.33334 7.49225 1.52269 7.02809 1.83351 6.67592L2.83317 7.55823ZM8 13.3323C8.16953 13.3323 8.32286 13.2699 8.44079 13.1659L9.3231 14.1655C8.97094 14.4763 8.50677 14.6657 8 14.6657V13.3323ZM7.55922 13.1659C7.67714 13.2699 7.83047 13.3323 8 13.3323V14.6657C7.49324 14.6657 7.02907 14.4763 6.67691 14.1655L7.55922 13.1659ZM13.1075 8.49919C13.247 8.37606 13.3333 8.19804 13.3333 7.99902H14.6667C14.6667 8.59646 14.4039 9.13335 13.9898 9.49885L13.1075 8.49919ZM7.47141 2.92182L2.80474 7.58848L1.86194 6.64567L6.5286 1.97901L7.47141 2.92182ZM8.41054 13.1943L13.0772 8.52762L14.02 9.47042L9.35335 14.1371L8.41054 13.1943ZM2.9228 8.52762L7.58947 13.1943L6.64666 14.1371L1.97999 9.47042L2.9228 8.52762ZM11.3333 5.33236H11.3267V3.99902H11.3333V5.33236Z"
-                                                fill="#121926" />
+                                                fill="Currentcolor" />
                                         </svg>
 
                                     </div>
-                                    <span>
+                                    <span class="pl-1">
                                         MAYUFRIENDS
                                     </span>
                                 </div>
-                                <div>
+                                <div class="">
                                     $/. 100 USD
 
                                 </div>
 
                             </div>
                             <div class="flex justify-between pt-2 ">
-                                <div class="text-txtnamecomntpkyr dark:text-bgprogresb text-sixteen ">
+                                <div class=" ">
                                     Descuento 70%:
                                 </div>
                                 <div>
@@ -3590,16 +3585,34 @@
                                 </div>
 
                             </div>
+                            <div class="flex justify-between text-txtnamecomntpkyr dark:text-bgprogresb text-sixteen pt-2">
+                                <div>
+                                    Total :
+                                </div>
+                                <div>
+                                    {{ $simbolo }} {{ $total * $cambio }}
+
+                                </div>
+
+                            </div>
                         </div>
                         <br>
                         <br>
-                        <br>
-                        @if ($type[1] == 4)
-                            Precio FINAL:{{ $simbolo }} {{ $precioFinal * $cambio }}
+                       {{--  @if ($type[1] == 4) --}}
+                        @if (true)
+                            <div class="justify-between flex text-txtnamecomntpkyr dark:text-bgprogresb text-sixteen font-normal">
+                                <div>Precio Final:</div><div>{{ $simbolo }} {{ $precioFinal * $cambio }}</div>
+                            </div>
                         @endif
-                        @if ($existe)
-                            PRECIO DESC : {{ $descuent }} % <br>
-                            PRECIO NOW : {{ round($precio_des, 2) }} <br>
+                       {{--  @if ($existe) --}}
+                        @if (true)
+                           <div class="justify-between flex dark:text-borderconcours text-txtnamecomntpkyr text-sixteen font-normal">
+
+                           
+                            <div>Precio Descuento :</div> {{ $descuent }} % </div>
+                            <div class="justify-between flex dark:text-borderconcours text-txtnamecomntpkyr text-sixteen font-normal">
+                            <div>Precio Now :</div> <div>{{ round($precio_des, 2) }} </div>
+                          </div>
                         @endif
                         @if ($type[1] == 1 || $type[1] == 2 || $type[1] == 3)
                             <div>
@@ -3623,8 +3636,9 @@
                                             placeholder="kanny_eldulce@gmail.com" wire:model.defer="inp_cupon">
                                     </div>
                                     <div class="pt-2">
-                                        <input type="button" class="rounded-lg dark:text-checkpricingdark text-pricingtextduowhite px-5 py-2 dark:bg-green_home bg-delesteicono " value="Aplicar"
-                                            wire:click="validCupon">
+                                        <input type="button"
+                                            class="rounded-lg dark:text-checkpricingdark text-pricingtextduowhite px-5 py-2 dark:bg-green_home bg-delesteicono "
+                                            value="Aplicar" wire:click="validCupon">
                                     </div>
                                 @endif
 

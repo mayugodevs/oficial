@@ -345,17 +345,17 @@
     
                     </div>
                     {{-- <x-ultimo-curso /> --}}
-                    <div class=" bg-bgfondopricingwhite">
+                    <div class=" bg-bgfondopricingwhite dark:bg-pricingcintadark">
                         <div class="grid grid-cols-4">
                             <div id="bcltemario" class="btnnavplayero btnmaterialactivo"
                                 onclick="opencl('cltemario','bcltemario')">Temario</div>
                             <div id="bclrecursos" class="btnnavplayero  xl:hidden"
                                 onclick="opencl('clrecursos','bclrecursos')">Recursos</div>
-                            <div id="bclevaluacion" class="btnnavplayero" onclick="opencl('clevaluacion','bclevaluacion')">
+                            <div id="bclevaluacion" class="btnnavplayero text-borderconcours" onclick="opencl('clevaluacion','bclevaluacion')">
                                 Evaluación</div>
-                            <div id="bclcomunidad" class="btnnavplayero" onclick="opencl('clcomunidad','bclcomunidad')">
+                            <div id="bclcomunidad" class="btnnavplayero text-borderconcours" onclick="opencl('clcomunidad','bclcomunidad')">
                                 Comunidad</div>
-                            <div id="bclnotas" class="btnnavplayero" onclick="opencl('clnotas','bclnotas')">Notas</div>
+                            <div id="bclnotas" class="btnnavplayero text-borderconcours" onclick="opencl('clnotas','bclnotas')">Notas</div>
                         </div>                    
                         <div class="p-4">
                             <div class="">
@@ -374,7 +374,7 @@
                                                                 </div>
                                                             </div>
                                                             <div>
-                                                                <div class="titlesdm text-gray-650">{{ $modulo->nom }}
+                                                                <div class="titlesdm text-gray-650 dark:text-bordersec">{{ $modulo->nom }}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -396,21 +396,21 @@
                                                                         $matt = $material->descripcion;
                                                                     @endphp
                                                                     <!-- Stepper HTML -->
-                                                                    <div class="stepmd bg bg-green">
+                                                                    <div class="stepmd ">
                                                                         <div>
                                                                             <div class="circlest">
                                                                                 <div class="dvid"></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="flex justify-between">
-                                                                            <div class="titlesd">
+                                                                            <div class="titlesd dark:text-bordersec text-gray-650">
                                                                                 {{ $material->material }} ::
                                                                                 {{ $material->idmaterial }}</div>
                                                                             <div>00:23</div>
                                                                         </div>
                                                                     </div>
                                                                 @else
-                                                                    <div class="stepmd {{ $visto }} bg bg-gray-200"
+                                                                    <div class="stepmd {{ $visto }} "
                                                                         wire:click="showVideo({{ $canti_videos }})">
                                                                         <div>
                                                                             <div class="circlest">
@@ -418,7 +418,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="flex justify-between">
-                                                                            <div class="titlesd">
+                                                                            <div class="titlesd dark:text-bordersec text-gray-650">
                                                                                 {{ $material->material }} ::
                                                                                 {{ $material->idmaterial }}</div>
                                                                             <div>00:25</div>
