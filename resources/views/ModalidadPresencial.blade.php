@@ -237,192 +237,216 @@
                 <div class="lg:col-span-3 col-span-1 ml:px-0 lg:pt-0 pt-12  lg:order-1 order-2">
 
                     <div>
-                       
-                        
+                        <div class="grid grid-cols-1 carrousel">
 
 
-                        <div>
-                            <div class="grid grid-cols-2 carrousel">
+                            <div class="overflow-hidden ">
+                                <div class=" flex flex-row   grande deslis " id="deslis">
 
-
-                                <div class="overflow-hidden ">
-                                    <div class=" flex flex-row   grande deslis " id="deslis">
-
-                                        <div class="sliderSeccion  " id="foto1">
-
-                                            <img src="../images/metodologia/Sectionfotovideo1.png" alt=""
-                                                class="sm:flex hidden">
-                                            <img src="../images/metodologia/imagehistoria.png" alt=""
-                                                class="sm:hidden flex">
-
-                                        </div>
-
-                                        <div class="sliderSeccion " id="foto2">
-                                            <img class="bg-cover"
-                                                src="https://www.ipchile.cl/wp-content/uploads/2021/10/Ing.-Industrial.jpg"
-                                                alt="">
-                                        </div>
-                                        <div class="sliderSeccion " id="foto3">
-                                            <img src="https://boyacaestudiaenelexterior.co/wp-content/uploads/2021/05/Ingenieria-Industrial.jpg"
-                                                alt="">
-                                        </div>
-
-                                        <div class="sliderSeccion " id="foto4">
-                                            <img src="https://d11cuk1a0j5b57.cloudfront.net/blog/wp-content/uploads/2018/05/ingenieria-industrial-razones-estudiar-occeducacion-occmundial.jpg"
-                                                alt="">
-                                        </div>
-
-
-
+                                    <div class="sliderSeccion   " id="foto1">
+                                        <img class="" src="{{ asset('images/metodologia/presencial1.png') }}"
+                                            class="sm:flex hidden">
+                                        <img src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
+                                        class="sm:hidden flex">
 
                                     </div>
-                                    <div class="">
+
+                                    <div class="sliderSeccion bg-cover" id="foto2">
+                                        <img class="bg-cover h-full " 
+                                        src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
+                                            alt="">
+                                    </div>
+                                    <div class="sliderSeccion " id="foto3">
+                                        <img class="h-full " src="{{ asset('images/metodologia/Imagehistoria.png') }}" alt="">
+                                    </div>
+
+                                    <div class="sliderSeccion " id="foto4">
+                                        <img class="h-full" src="{{ asset('images/metodologia/Imagehome1.png') }}" alt="">
+                                    </div>
+
+                                     <div class="hidden">
                                         <button class="btnrigth text-white-300" id="btnrigth">
                                             siguiente
                                         </button>
                                     </div>
+
+
+                                </div>
+                                <div class="  ">
+                                    <div class="h-4  bg-green inicio expandir" id="proceso">
+
+                                    </div>
+                                   
                                 </div>
 
+                            </div>
+                            
 
 
-                                <div
-                                    class="lg:pt-12 pt-10   mb-7 lg:mr-12 mr-8 lg:ml-0 ml-8 justify-between flex-col flex">
-                                    <div>
-                                        <div
-                                            class="text-2xl   dark:text-white-500 text-gray-500 font-inter font-medium leading-8">
-                                            "En MayuGo se aprende muchisimo el equipo de docentes que inparten las clases,
-                                            la
-                                            inparten
-                                            de una manera que
-                                            quedas muy satisfecho en querer seguir tomando mas conocimiento profecional"
-                                        </div>
-                                        <div class="flex sm:flex-row flex-col pt-9">
-                                            <div
-                                                class="font-inter  font-lg dark:text-borderconcours text-txtnamecomntpkyr">
-                                                kenny espiriu
-                                                falcon estudiante de</div>
-                                            <div class="text-greenhover  font-semibold sm:px-2 px-0">MayuGo</div>
-                                        </div>
-                                    </div>
-                                    <div class="sm:pt-0 ">
-                                        <div class="gap-x-10 flex puntos ">
-                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400  punto cursor-pointer "
-                                                for="foto1"></label>
-                                            <label class="w-8 h-8  difuso   rounded-full bg-gray-400 punto cursor-pointer"
-                                                for="foto2"></label>
-                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400 punto cursor-pointer"
-                                                for="foto3"></label>
-                                            <label class="w-8 h-8 difuso  rounded-full bg-gray-400 punto cursor-pointer"
-                                                for="foto4"></label>
-                                        </div>
+                            <div class="lg:pt-12 pt-10    justify-between flex">
 
+                                <div class="sm:pt-0 ">
+                                    <div class="gap-x-3 grid grid-cols-4 puntos ">
+                                        <label class=" difuso punto   bg-gray-400   punto cursor-pointer cis " for="foto1" id="bg1">
+                                            <img class="h-full" src="{{ asset('images/metodologia/presencial1.png') }}" alt="">
+                                        </label>
+                                        <label class="  difuso punto    bg-gray-400 punto cursor-pointer" for="foto2" id="bg2">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Contentscritorio1.png') }}">
+                                        </label>
+                                        <label class=" difuso punto   bg-gray-400 punto cursor-pointer" for="foto3" id="bg3">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Imagehistoria.png') }}" alt="">
+                                        </label>
+                                        <label class=" difuso punto   bg-gray-400 punto cursor-pointer" for="foto4" id="bg4">
+                                            <img class="h-full" src="{{ asset('images/metodologia/Imagehome1.png') }}" alt="">
+                                        </label>
                                     </div>
 
                                 </div>
 
-
-
-                                <style>
-                                    .carrousel .grande {
-                                        width: 400%;
-                                        transition: all .5s ease;
-
-                                        transform: translateX(0%);
-                                    }
-
-
-                                    .sliderSeccion {
-                                        width: 100%;
-
-                                    }
-
-                                    .puntos .difuso {
-                                        opacity: 0.1;
-
-                                    }
-
-                                    .puntos .circulo {
-                                        border: #145229;
-                                        border-style: solid;
-
-                                    }
-                                </style>
-
-                                <script>
-                                    const grande = document.querySelector('.grande');
-                                    const punto = document.querySelectorAll('.punto');
-
-                                    /* cambia cuando das click */
-                                    punto.forEach((cadaPunto, i) => {
-                                        punto[i].addEventListener('click', () => {
-                                            let posicion = i
-                                            let operacion = posicion * (-25)
-
-                                            grande.style.transform = `translateX(${operacion}%)`
-
-
-                                            punto.forEach((cadaPunto, i) => {
-                                                punto[i].classList.add('difuso')
-                                                punto[i].classList.add('circulo')
-
-
-                                            })
-                                            punto[i].classList.remove('difuso')
-                                            punto[i].classList.remove('circulo')
-
-                                        })
-
-                                    });
-
-
-
-                                    /*   para seguiemiento mientras rota */
-
-                                    setTimeout(function() {
-                                        for (var i = 0; i < punto.length; i++) {
-
-                                            punto[0].style.backgroundColor = 'blue';
-                                            i++
-                                        }
-
-                                    }, 3000);
-                                </script>
-
-                                <script>
-                                    let deslis = document.querySelector("#deslis");
-                                    let sliderSeccion = document.querySelectorAll(".sliderSeccion");
-                                    let sliderlast = sliderSeccion[sliderSeccion.length - 1];
-
-                                    deslis.insertAdjacentElement('afterbegin', sliderlast);
-
-                                    function Next() {
-                                        let sliderFirst = document.querySelectorAll(".sliderSeccion")[0];
-
-                                        deslis.style.marginLeft = "-100%";
-                                        deslis.style.transition = "all 0.5s";
-
-                                        setTimeout(function() {
-                                            deslis.style.transition = "none";
-                                            deslis.insertAdjacentElement('beforeend', sliderFirst);
-                                            deslis.style.marginLeft = "-100%";
-
-                                        }, 500);
-
-                                    }
-
-                                    const btnrigth = document.querySelector("#btnrigth");
-
-                                    btnrigth.addEventListener('click', function() {
-                                        Next();
-                                    });
-
-                                    setInterval(function() {
-                                        Next();
-                                    }, 5000);
-                                </script>
                             </div>
 
+                          
+
+                            <style>
+                                .carrousel .grande {
+                                    width: 400%;
+                                    transition: all .5s ease;
+
+                                    transform: translateX(0%);
+                                }
+                                .inicio{
+                                    width: 0%;
+                                }
+                                .expandir{
+                                    transition: all 3s linear 0.03s ;
+                                   /*  transition: cubic-bezier(0.165, 0.84, 0.44, 1) */
+                                }
+                                .final{
+                                    width: 100%
+                                }
+
+
+                                .sliderSeccion {
+                                    width: 100%;
+
+                                }
+
+                                .puntos .difuso {
+                                    opacity: 0.5;
+
+                                }
+
+                                .puntos .circulo {
+                                    border:;
+                                    border-style: ;
+
+                                }
+                            </style>
+
+                            <script>
+                                const grande = document.querySelector('.grande');
+                                const punto = document.querySelectorAll('.punto');
+
+                                /* cambia cuando das click */
+                                punto.forEach((cadaPunto, i) => {
+                                    punto[i].addEventListener('click', () => {
+                                        let posicion = i
+                                        let operacion = posicion * (-25)
+
+                                        grande.style.transform = `translateX(${operacion}%)`
+
+
+                                        punto.forEach((cadaPunto, i) => {
+                                            punto[i].classList.add('difuso')
+                                            punto[i].classList.add('circulo')
+
+
+                                        })
+                                        punto[i].classList.remove('difuso')
+                                        punto[i].classList.remove('circulo')
+
+                                    })
+
+                                });
+
+
+
+                                /*   para seguiemiento mientras rota */
+
+                                setTimeout(function() {
+                                    for (var i = 0; i < punto.length; i++) {
+
+                                        punto[0].style.backgroundColor = 'blue';
+                                        i++
+                                    }
+
+                                }, 3000);
+                            </script>
+
+                             <script>
+                               
+                                let deslis =document.querySelector("#deslis");
+                                let sliderSeccion = document.querySelectorAll(".sliderSeccion");
+                                let sliderlast = sliderSeccion[sliderSeccion.length -1];
+    
+                                deslis.insertAdjacentElement('afterbegin', sliderlast);
+    
+                                function Next() {
+                                    let sliderFirst = document.querySelectorAll(".sliderSeccion")[0];
+    
+                                    deslis.style.marginLeft = "-100%";
+                                    deslis.style.transition = "all 0.5s";
+                                    
+                                    setTimeout(function() {
+                                        deslis.style.transition = "none";
+                                        deslis.insertAdjacentElement('beforeend', sliderFirst);
+                                        deslis.style.marginLeft = "-100%";
+    
+                                    }, 5000);
+    
+                                }
+
+                                function progresbar(params) {
+                                    setTimeout(function () {
+                                        
+                                        /*  var pro=document.getElementById('proceso');
+                                        pro.classList.toggle('barrawidth'); */
+                                        document.getElementById("proceso").classList.toggle('final');
+                                       
+                                       /*  document.getElementById(progress).classList.toggle('expandir'); */
+                                            
+                                        }, 10);
+                                }
+                              
+                                    
+                                  
+                                
+    
+                                const btnrigth= document.querySelector("#btnrigth");
+                                
+                                btnrigth.addEventListener('click',function(){
+                                    Next();
+                                });
+    
+                                setInterval(function() {
+                                    Next();
+                                   
+                                  
+                                }, 4000);
+                                setInterval(function() {
+                                   
+                                    progresbar();
+                                  
+                                }, 2000);
+
+                                
+                            </script>
                         </div>
+                       
+                        
+
+
+                       
                        
 
                     </div>

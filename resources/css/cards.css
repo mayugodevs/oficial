@@ -619,6 +619,10 @@ font-weight: 500;
 font-size: 14px;
 line-height: 20px;
 }
+.barrawidth{
+  width: 100%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
 .btnnavplayero{
     @apply h-14 flex items-center justify-center cursor-pointer border-b border-bordersec text-borderconcours;
     font-family: 'Inter';
