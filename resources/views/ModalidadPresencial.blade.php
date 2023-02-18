@@ -241,13 +241,13 @@
 
 
                             <div class="overflow-hidden ">
-                                <div class=" flex flex-row   grande deslis " id="deslis">
+                                <div class=" flex flex-row alturapresencial overflow-y-hidden  grande deslis " id="deslis">
 
                                     <div class="sliderSeccion   " id="foto1">
                                         <img class="" src="{{ asset('images/metodologia/presencial1.png') }}"
                                             class="sm:flex hidden">
                                         <img src="{{ asset('images/metodologia/Contentscritorio1.png') }}"
-                                        class="sm:hidden flex">
+                                        class="sm:hidden  flex">
 
                                     </div>
 
@@ -273,7 +273,7 @@
 
                                 </div>
                                 <div class="  ">
-                                    <div class="h-4  bg-green inicio expandir" id="proceso">
+                                    <div class="h-2 rounded-md  bg-green inicio  " id="proceso">
 
                                     </div>
                                    
@@ -318,7 +318,10 @@
                                     width: 0%;
                                 }
                                 .expandir{
-                                    transition: all 3s linear 0.03s ;
+                                    transition-property: width;
+                                transition-duration: 1.8s;
+                                transition-timing-function: linear;
+                                  transition-delay: 0.1s;
                                    /*  transition: cubic-bezier(0.165, 0.84, 0.44, 1) */
                                 }
                                 .final{
@@ -402,20 +405,27 @@
                                         deslis.insertAdjacentElement('beforeend', sliderFirst);
                                         deslis.style.marginLeft = "-100%";
     
-                                    }, 5000);
+                                    }, 2000);
     
                                 }
 
                                 function progresbar(params) {
-                                    setTimeout(function () {
+                                  
                                         
                                         /*  var pro=document.getElementById('proceso');
                                         pro.classList.toggle('barrawidth'); */
-                                        document.getElementById("proceso").classList.toggle('final');
-                                       
+                                        
+                                      /*  var expandir=document.querySelector('expandir');
+                                        if (expandir) { */
+                                            document.getElementById("proceso").classList.toggle('final');
+                                            document.getElementById("proceso").classList.toggle('expandir'); 
+                                       /*  }
+                                        
+
+                                        document.getElementById("proceso").classList.toggle('inicio');
                                        /*  document.getElementById(progress).classList.toggle('expandir'); */
-                                            
-                                        }, 10);
+                                       /* document.getElementById("proceso").classList.toggle('expandir');     */ 
+                                       
                                 }
                               
                                     
@@ -430,12 +440,12 @@
     
                                 setInterval(function() {
                                     Next();
-                                   
+                                    progresbar();
                                   
-                                }, 4000);
+                                }, 2000);
                                 setInterval(function() {
                                    
-                                    progresbar();
+                                   
                                   
                                 }, 2000);
 
