@@ -369,7 +369,7 @@
                                                     <div class="flex justify-between items-center">
                                                         <div class="stepmd stepmd-active">
                                                             <div>
-                                                                <div class="circlestt">
+                                                                <div class="circlestt ">
                                                                     <div class="dvidd"></div>
                                                                 </div>
                                                             </div>

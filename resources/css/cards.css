@@ -895,10 +895,10 @@ line-height: 20px;
     /*color: #4285f4*/
   }
   .stepmd.stepmd-active .circlest {
-    background-color: #D6F5E0;
+    @apply dark:bg-green_home bg-bgprogresb
   }
   .stepmd.stepmd-active .circlestt {
-    background-color: #D6F5E0;
+    @apply bg-bordersec dark:bg-green_home
   }
   .dvid{
     width:8px;
@@ -911,7 +911,7 @@ line-height: 20px;
     border-radius:50%;
   }
   .stepmd div .circlest .dvid{
-    background-color:#E3E8EF;
+   @apply dark:bg-gray-650 bg-bordersec 
   }
   .stepmd div .circlestt .dvidd{
     background-color:#E3E8EF;
@@ -925,18 +925,19 @@ line-height: 20px;
   
   /* Circle */
   .circlest {
-    background: #EEF2F6;
+   
     position: relative;
     width: 24px;
     height: 24px;
     line-height: 1.5em;
     border-radius: 100%;
-    color: #fff;
+    
     text-align: center;
     display:flex;
     align-items:center;
     justify-content:center;
     z-index:0;
+    @apply dark:bg-txtnamecomntpkyr bg-bgprogresb
   }
 
   .circlestt {
@@ -952,6 +953,7 @@ line-height: 20px;
     align-items:center;
     justify-content:center;
     z-index:0;
+    
   }
   
   /* Vertical Line */

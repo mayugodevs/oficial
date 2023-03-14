@@ -56,7 +56,7 @@
                                     }
                                 }, 1000)
                             };
-                            countdown('February 28 2023 9:50:00 GMT-0500', 'clock1', '¡Agotado!');
+                            countdown('june 28 2023 9:50:00 GMT-0500', 'clock1', '¡Agotado!');
                         </script>
 
                         <div class="sm:w-1/2 w-full pt-2 " id="clock">
@@ -64,22 +64,22 @@
                             <div class="flex text-center items-center justify-between">
                                 <div class="">
                                     <p
-                                        class="text-1xl dark:bg-gray-500 p-6 bg-celeste rounded-md dark:text-white-500 text-gray-300 font-bold">
+                                        class="text-xl dark:bg-gray-500 p-6 font-inter bg-celeste rounded-md dark:text-white-500 text-gray-300 font-bold">
                                         00</p>
                                     <p class="text-sm dark:text-white-500 text-gray-300 font-inter pt-2">Días</p>
                                 </div>
                                 <div class="">
-                                    <p class="text-1xl dark:bg-gray-500 p-6 bg-celeste  rounded-md dark:text-white-500 text-gray-300 font-bold"
+                                    <p class="text-xl dark:bg-gray-500 p-6 bg-celeste font-inter  rounded-md dark:text-white-500 text-gray-300 font-bold"
                                         id="hrs">00</p>
                                     <p class="text-sm dark:text-white-500 text-gray-300 font-inter pt-2">Horas</p>
                                 </div>
                                 <div class="">
-                                    <p class="text-1xl dark:bg-gray-500 p-6 bg-celeste  rounded-md dark:text-white-500 text-gray-300 font-bold"
+                                    <p class="text-xl dark:bg-gray-500 p-6 bg-celeste font-inter  rounded-md dark:text-white-500 text-gray-300 font-bold"
                                         id="min">00</p>
                                     <p class="text-sm dark:text-white-500 text-gray-300 font-inter pt-2">Minutos</p>
                                 </div>
                                 <div>
-                                    <p class="text-1xl dark:bg-gray-500 p-6 bg-celeste  rounded-md dark:text-white-500 text-gray-300 font-bold"
+                                    <p class="text-xl dark:bg-gray-500 p-6 bg-celeste font-inter  rounded-md dark:text-white-500 text-gray-300 font-bold"
                                         id="sec">00</p>
                                     <p class="text-sm dark:text-white-500 text-gray-300 font-inter pt-2">Seg</p>
                                 </div>
